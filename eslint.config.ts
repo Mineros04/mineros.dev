@@ -1,14 +1,25 @@
 import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginAstro from "eslint-plugin-astro";
+import tseslint from "typescript-eslint";
 
 export default [
-  // Astro's recommended linting rules.
+  // Basic JS/TS recommended rules.
+  tseslint.configs.recommended,
+
+  // Recommended Astro rules.
   ...eslintPluginAstro.configs.recommended,
 
+  // Specific Parser Config for Astro + TS.
   {
-    ignores: ["**/*.md", "**/*.mdx"]
+    files: ["**/*.astro"],
+    languageOptions: {
+      parserOptions: {
+        parser: tseslint.parser, // This tells Astro to use TS parser for frontmatter
+        extraFileExtensions: [".astro"]
+      }
+    }
   },
 
-  // Turn off anything that conflicts with Prettier (MUST be last).
+  // Prettier peacemaker (Always last).
   eslintConfigPrettier
 ];
