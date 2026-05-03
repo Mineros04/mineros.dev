@@ -1,9 +1,10 @@
 // @ts-check
-import { defineConfig } from "astro/config";
-import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
-import icon from "astro-icon";
 import sitemap from "@astrojs/sitemap";
+import vue from "@astrojs/vue";
+import tailwindcss from "@tailwindcss/vite";
+import icon from "astro-icon";
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,5 +12,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [mdx(), icon(), sitemap()]
+  integrations: [mdx(), icon(), sitemap(), vue()]
 });

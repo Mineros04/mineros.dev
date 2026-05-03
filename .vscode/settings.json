@@ -1,4 +1,4 @@
 {
-  "conventionalCommits.scopes": ["layouts", "commits"],
+  "conventionalCommits.scopes": ["layouts", "commits", "social links"],
   "conventionalCommits.gitmoji": false
 }
