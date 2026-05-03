@@ -1,35 +1,41 @@
 [
   {
+    "id": "github",
     "title": "GitHub",
     "url": "https://github.com/Mineros04",
     "icon": "mdi:github",
     "visible": true
   },
   {
+    "id": "instagram",
     "title": "Instagram",
     "url": "https://instagram.com/mineros04",
     "icon": "mdi:instagram",
     "visible": true
   },
   {
+    "id": "reddit",
     "title": "Reddit",
     "url": "https://reddit.com/u/mineros04",
     "icon": "mdi:reddit",
     "visible": true
   },
   {
+    "id": "twitch",
     "title": "Twitch",
     "url": "https://twitch.tv/mineros04",
     "icon": "mdi:twitch",
     "visible": true
   },
   {
+    "id": "youtube",
     "title": "YouTube",
     "url": "https://www.youtube.com/@mineros0469",
     "icon": "mdi:youtube",
     "visible": true
   },
   {
+    "id": "linkedin",
     "title": "LinkedIn",
     "url": "https://www.linkedin.com/in/adam-jaro%C5%A1-9a41763a2",
     "icon": "mdi:linkedin",
