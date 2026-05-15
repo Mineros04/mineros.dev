@@ -1,27 +1,47 @@
 ---
 import "@fontsource/poppins/400.css";
 import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/900.css";
 import "@/styles/global.css";
 
+import { SEO } from "astro-seo";
+
 interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/webp" href="/mineros-favicon-v1.webp" />
-    <link rel="icon" type="image/png" href="/mineros-favicon-v1.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Adam Jaroš | {title}</title>
+    <SEO
+      title={title}
+      titleTemplate="%s | Adam Jaroš"
+      description={description}
+      charset="UTF-8"
+      extend={{
+        link: [
+          { rel: "icon", type: "image/webp", href: "/mineros-favicon-v1.webp" },
+          { rel: "icon", type: "image/png", href: "/mineros-favicon-v1.png" }
+        ],
+        meta: [
+          {
+            name: "viewport",
+            content: "width=device-width, initial-scale=1.0"
+          },
+          {
+            name: "generator",
+            content: Astro.generator
+          }
+        ]
+      }}
+    />
   </head>
-  <body>
+  <body class="bg-base-100 text-base-content min-h-screen w-screen">
     <slot />
   </body>
 </html>
