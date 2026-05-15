@@ -3,7 +3,8 @@
     "layouts",
     "commits",
     "social links",
-    "components"
+    "components",
+    "theme"
   ],
   "conventionalCommits.gitmoji": false
 }
