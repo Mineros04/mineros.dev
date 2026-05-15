@@ -1,7 +1,51 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+import ProfileIcon from "@/assets/mineros-icon.webp";
+
+const socialLinks = await getCollection("socialLinks");
 ---
 
-<Layout title="Links">
-  <div></div>
+<Layout title="Links" description="">
+  <div class="bg-anim-hero grid h-screen w-screen place-items-center">
+    <div class="z-1 flex w-96 flex-col items-center gap-y-4">
+      <Image
+        src={ProfileIcon}
+        alt="Adam Jaroš Profile Icon"
+        loading="eager"
+        class="h-28 w-28"
+      />
+      <h2 class="text-3xl font-bold">Mineros04</h2>
+      <nav
+        class="w-96 rounded-2xl bg-zinc-700 p-8 shadow-2xl shadow-indigo-800"
+      >
+        <ul class="flex flex-col gap-y-4">
+          {
+            socialLinks.map(
+              link =>
+                link.data.visible && (
+                  <li>
+                    <a
+                      href={link.data.url}
+                      class="btn btn-primary btn-block btn-lg shadow-glossy-3d flex items-center gap-x-2 rounded-full border-0 text-zinc-100"
+                    >
+                      <Icon name={link.data.icon} class="h-8 w-8" />
+                      <span class="text-xl">{link.data.title}</span>
+                    </a>
+                  </li>
+                )
+            )
+          }
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <footer
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 text-center text-zinc-400"
+  >
+    Copyright &copy; 2026 Adam Jaroš<br />
+    All right reserved.
+  </footer>
 </Layout>
