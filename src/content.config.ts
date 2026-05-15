@@ -5,7 +5,6 @@ import { defineCollection } from "astro:content";
 const socialLinks = defineCollection({
   loader: file("src/content/socialLinks/links.json"),
   schema: z.object({
-    id: z.string(),
     title: z.string(),
     url: z.url(),
     icon: z.string(),
