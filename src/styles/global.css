@@ -1,4 +1,50 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@plugin "daisyui" {
+  /* Active themes. */
+  themes:
+    light --default,
+    dark --prefersdark;
+}
+
+/* ----------------------------------
+   CUSTOMIZE LIGHT THEME
+----------------------------------- */
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+
+  --color-base-100: var(--color-zinc-50);
+  --color-base-200: var(--color-zinc-200);
+  --color-base-300: var(--color-zinc-300);
+  --color-base-content: var(--color-zinc-900);
+
+  --color-primary: var(--color-indigo-500);
+  --color-primary-content: var(--color-white);
+
+  --color-secondary: var(--color-sky-500);
+  --color-secondary-content: var(--color-white);
+}
+
+/* ----------------------------------
+   CUSTOMIZE DARK THEME
+----------------------------------- */
+@plugin "daisyui/theme" {
+  name: "dark";
+  prefersdark: true;
+
+  --color-base-100: var(--color-zinc-900);
+  --color-base-200: var(--color-zinc-950);
+  --color-base-300: #000000;
+  --color-base-content: var(--color-zinc-50);
+
+  --color-primary: var(--color-indigo-400);
+  --color-primary-content: var(--color-indigo-950);
+
+  --color-secondary: var(--color-sky-400);
+  --color-secondary-content: var(--color-sky-950);
+}
 
 @theme {
   --font-sans:
