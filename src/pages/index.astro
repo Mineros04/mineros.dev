@@ -33,6 +33,9 @@ const socialLinks = await getCollection("socialLinks");
                     <a
                       href={link.data.url}
                       class="btn btn-primary btn-block btn-lg shadow-gloss-3d flex items-center gap-x-2 rounded-full border-0 text-zinc-100"
+                      data-umami-event="Outbound Link"
+                      data-umami-event-type="Social Media"
+                      data-umami-event-link={link.data.title}
                     >
                       <Icon name={link.data.icon} class="h-8 w-8" />
                       <span class="text-xl">{link.data.title}</span>
