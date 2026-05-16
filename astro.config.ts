@@ -6,6 +6,8 @@ import createUmami from "@yeskunall/astro-umami";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 
+process.loadEnvFile();
+
 // Analytics
 const umami = createUmami({
   id: process.env.UMAMI_WEBSITE_ID ?? "",
