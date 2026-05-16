@@ -1,4 +1,4 @@
-# Mineros04' personal website
+# Mineros04's personal website
 
 > **WARNING!** This website is WIP.
 
