@@ -46,18 +46,20 @@
   --color-secondary-content: var(--color-sky-950);
 }
 
+/*
+  ===== Custom extensions =====
+*/
 @theme {
   --font-sans:
     "Poppins", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  /* Custom extensions. */
   --spacing-inherit: inherit;
 
-  /* Creates the 'shadow-glossy' class */
+  /* Inset shadow glow. */
   --shadow-gloss: inset 0 2px 4px rgba(255, 255, 255, 0.5);
 
-  /* Optional: A variant that includes the dark bottom edge too */
+  /* Variant that includes the dark bottom edge too. */
   --shadow-gloss-3d:
     inset 0 2px 4px rgba(255, 255, 255, 0.5),
     inset 0 -2px 6px rgba(0, 0, 0, 0.3);
