@@ -13,7 +13,7 @@ const socialLinks = await getCollection("socialLinks");
   description="Welcome to Adam Jaroš's link hub, where you can connect with me and find everything important. One link to rule them all!"
 >
   <div class="bg-anim-hero grid h-screen w-screen place-items-center">
-    <div class="z-1 flex w-96 flex-col items-center gap-y-4">
+    <div class="z-1 flex w-full flex-col items-center gap-y-4">
       <Image
         src={ProfileIcon}
         alt="Adam Jaroš Profile Icon"
@@ -22,7 +22,7 @@ const socialLinks = await getCollection("socialLinks");
       />
       <h2 class="text-3xl font-bold">Mineros04</h2>
       <nav
-        class="w-96 rounded-2xl bg-zinc-700 p-8 shadow-2xl shadow-indigo-800"
+        class="w-9/10 max-w-96 rounded-2xl bg-zinc-700 p-8 shadow-2xl shadow-sky-500"
       >
         <ul class="flex flex-col gap-y-4">
           {
