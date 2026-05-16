@@ -55,10 +55,10 @@
   --spacing-inherit: inherit;
 
   /* Creates the 'shadow-glossy' class */
-  --shadow-glossy: inset 0 2px 4px rgba(255, 255, 255, 0.5);
+  --shadow-gloss: inset 0 2px 4px rgba(255, 255, 255, 0.5);
 
   /* Optional: A variant that includes the dark bottom edge too */
-  --shadow-glossy-3d:
+  --shadow-gloss-3d:
     inset 0 2px 4px rgba(255, 255, 255, 0.5),
     inset 0 -2px 6px rgba(0, 0, 0, 0.3);
 }
