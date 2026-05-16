@@ -5,18 +5,19 @@ import tailwindcss from "@tailwindcss/vite";
 import createUmami from "@yeskunall/astro-umami";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
+import { loadEnv } from "vite";
 
-process.loadEnvFile();
+const env = loadEnv(process.env.NODE_ENV || "production", process.cwd(), "");
 
 // Analytics
 const umami = createUmami({
-  id: process.env.UMAMI_WEBSITE_ID ?? "",
-  endpointUrl: process.env.UMAMI_HOST ?? ""
+  id: env.UMAMI_WEBSITE_ID ?? "",
+  endpointUrl: env.UMAMI_HOST ?? ""
 });
 
 // https://astro.build/config
 export default defineConfig({
-  site: process.env.BASE_DOMAIN ?? "",
+  site: env.BASE_DOMAIN ?? "http://localhost:4321",
   trailingSlash: "never",
 
   vite: {
