@@ -17,7 +17,6 @@
     "@astrojs/vue": "^6.0.1",
     "@fontsource/poppins": "^5.2.7",
     "@iconify-json/mdi": "^1.2.3",
-    "@inspira-ui/plugins": "^0.0.2",
     "@tailwindcss/vite": "^4.3.0",
     "@vueuse/core": "^14.3.0",
     "@yeskunall/astro-umami": "^0.0.8",
