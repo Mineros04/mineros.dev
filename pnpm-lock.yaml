@@ -51,6 +51,9 @@ importers:
         specifier: ^1.4.0
         version: 1.4.0
     devDependencies:
+      '@iconify/svelte':
+        specifier: ^5.2.1
+        version: 5.2.1(svelte@5.55.9(@typescript-eslint/types@8.60.0))
       daisyui:
         specifier: ^5.5.19
         version: 5.5.20
@@ -418,6 +421,11 @@ packages:
 
   '@iconify-json/mdi@1.2.3':
     resolution: {integrity: sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg==}
+
+  '@iconify/svelte@5.2.1':
+    resolution: {integrity: sha512-zHmsIPmnIhGd5gc95bNN5FL+GifwMZv7M2rlZEpa7IXYGFJm/XGHdWf6PWQa6OBoC+R69WyiPO9NAj5wjfjbow==}
+    peerDependencies:
+      svelte: '>5.0.0'
 
   '@iconify/tools@4.2.0':
     resolution: {integrity: sha512-WRxPva/ipxYkqZd1+CkEAQmd86dQmrwH0vwK89gmp2Kh2WyyVw57XbPng0NehP3x4V1LzLsXUneP1uMfTMZmUA==}
@@ -3372,6 +3380,11 @@ snapshots:
   '@iconify-json/mdi@1.2.3':
     dependencies:
       '@iconify/types': 2.0.0
+
+  '@iconify/svelte@5.2.1(svelte@5.55.9(@typescript-eslint/types@8.60.0))':
+    dependencies:
+      '@iconify/types': 2.0.0
+      svelte: 5.55.9(@typescript-eslint/types@8.60.0)
 
   '@iconify/tools@4.2.0':
     dependencies:
