@@ -40,5 +40,12 @@
     "url": "https://www.linkedin.com/in/adam-jaro%C5%A1-9a41763a2",
     "icon": "mdi:linkedin",
     "visible": true
+  },
+  {
+    "id": "email",
+    "title": "adam@mineros.dev",
+    "url": "mailto:adam@mineros.dev",
+    "icon": "mdi:email",
+    "visible": true
   }
 ]
