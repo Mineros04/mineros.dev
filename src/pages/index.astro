@@ -4,8 +4,13 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { Icon } from "astro-icon/components";
 import ProfileIcon from "@/assets/mineros-icon.webp";
+import linksJson from "@/content/socialLinks/links.json";
 
-const socialLinks = await getCollection("socialLinks");
+const socialLinks = (await getCollection("socialLinks")).sort(
+  (a, b) =>
+    linksJson.findIndex(l => l.id === a.id) -
+    linksJson.findIndex(l => l.id === b.id)
+);
 ---
 
 <Layout
